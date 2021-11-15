@@ -111,6 +111,20 @@ TypeScript -> Transpile -> JavaScript -> Browser/Node
 
 
 
+https://forms.gle/cp54zyeqmW55UkzQ8
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # 4 Sessions & 3 breaks
