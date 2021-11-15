@@ -13,6 +13,11 @@ export class UsersComponent{
     dob : new Date('Dec 21, 1964'),
     isWorking : true,
     company : "microsoft",
-    imgSrc : "./assets/images/bill.jpg"
+    imgSrc : "./assets/images/bill.jpg",
+    votes : 120
+  }
+
+  onMoreInfo(usr : any){
+    alert(`Mr. ${usr.lastName} is working with ${usr.company}!`)
   }
 }
