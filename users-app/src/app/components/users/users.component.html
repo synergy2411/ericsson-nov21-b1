@@ -1,0 +1,16 @@
+<div class="container">
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col-3">
+        <img [src]="user.imgSrc" alt="" class="img-fluid rounded-circle">
+      </div>
+      <div class="col-9">
+        <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+        <p>Income : <span [innerText]="user.income"></span> </p>
+        <p>Date of Birth : {{ user.dob }}</p>
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
