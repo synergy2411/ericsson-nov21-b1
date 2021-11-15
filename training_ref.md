@@ -75,13 +75,25 @@ TypeScript -> Transpile -> JavaScript -> Browser/Node
 
 
 
+# Angular CLI Tool
+> npm install @angular/cli@10 -g
+> ng --version
+> ng new users-app
+> cd users-app
+> ng serve | npm run start
 
 
 
+> cd users-app
+> npm install --force
 
 
+> npm uninstall @angular/cli@10 -g
 
-
+> npm install @angular/cli@11 -g
+> ng new <user-app>
+> cd users-app
+> ng serve
 
 
 
