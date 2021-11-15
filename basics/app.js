@@ -143,26 +143,24 @@
 // demo("test@test.com", 32, true, [], function(){}, {})
 
 
-let numbers = [3,4,5];
+// let numbers = [3,4,5];
 
-// let newNumbers = [1,2, numbers, 6,7,8];          // [1,2,[3,4,5],6,7,8]
-let newNumbers = [1,2, ...numbers, 6,7,8];          // [1,2,3,4,5,6,7,8]
+// // let newNumbers = [1,2, numbers, 6,7,8];          // [1,2,[3,4,5],6,7,8]
+// let newNumbers = [1,2, ...numbers, 6,7,8];          // [1,2,3,4,5,6,7,8]
 
-console.log(newNumbers)
+// console.log(newNumbers)
 
-let user = {
-    email : "test@test.com",
-    isAdmin : true
-}
+// let user = {
+//     email : "test@test.com",
+//     isAdmin : true
+// }
 
-let newUser = {
-    ...user,
-    age : 32
-}
+// let newUser = {
+//     ...user,
+//     age : 32
+// }
 
-console.log(newUser);       // {age : 32, email : "test@test.com"}
-
-
+// console.log(newUser);       // {age : 32, email : "test@test.com"}
 
 
 
@@ -177,7 +175,89 @@ console.log(newUser);       // {age : 32, email : "test@test.com"}
 
 
 
-// - Template Literals
+
+
+// - Template Literals : " " || ' ' || ` ` (back tick)
+// - Write multiline string without '\n'
+// - Embed variables within string without (+)
+
+// let username = "Foo";
+
+// let str = `Hello ${username}
+// I am ${30+2} years old!
+// `
+
+// let str1 = "Hello " + username + "\n This is new line!"
+
+// console.log(str);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // - Classes
+
+// class Student{
+//     constructor(email, age){
+//         this.email = email;
+//         this.age = age;
+//     }
+//     getDetails(){
+//         return `Hello from ${this.email}, I'm ${this.age} years old!`
+//     }
+// }
+
+// function Student(email, age){
+//     // var this = {};
+//     this.email = email;
+//     this.age = age;
+//     this.getDetails = function(){
+//         return `Hello from ${this.email}, I'm ${this.age} years old!`
+//     }
+//     // return this;
+// }
+
+
+// let foo = new Student("test@test.com", 34);
+// console.log(foo.getDetails())
+
+
+
+let x = "Some String";
+console.log(typeof x);      // string
+
+x = true;
+console.log(typeof x);      // boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // - Module
-// - Decorators etc
+
+
+
+
