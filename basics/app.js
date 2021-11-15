@@ -236,14 +236,24 @@
 
 
 
-let x = "Some String";
-console.log(typeof x);      // string
+// let x = "Some String";
+// console.log(typeof x);      // string
 
-x = true;
-console.log(typeof x);      // boolean
+// x = true;
+// console.log(typeof x);      // boolean
 
+function demo(firstName){
+    var self = {};
+    self.firstName = firstName;
+    self.getFirstName = function(){
+        return "Hello " + this.firstName
+    }
+    return self;
+}
 
+const obj = demo("Foo");
 
+console.log(obj.getFirstName())
 
 
 
