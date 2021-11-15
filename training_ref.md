@@ -96,7 +96,8 @@ TypeScript -> Transpile -> JavaScript -> Browser/Node
 > ng serve
 
 
-
+# Bootstrap installation
+- npm install bootstrap@4 
 
 
 
