@@ -92,16 +92,16 @@
 
 // - Destructuring : "unpacking" the collection (Object/Array)
 
-let friends = ["Foo", "Bar", "Bam"];
+// let friends = ["Foo", "Bar", "Bam"];
 
-let [f1, f2, f3] = friends;
+// let [f1, f2, f3] = friends;
 
-console.log(f3)
+// console.log(f3)
 
-f3 = "Baz";
-console.log(friends[2]);           // Bam
-friends[2] = "Something Else"
-console.log(friends[2]);           // Something Else
+// f3 = "Baz";
+// console.log(friends[2]);           // Bam
+// friends[2] = "Something Else"
+// console.log(friends[2]);           // Something Else
 // console.log(f3)
 
 
@@ -129,7 +129,54 @@ console.log(friends[2]);           // Something Else
 
 
 
-// - Rest/Spread Operator
+// - Rest/Spread Operator (...)
+// - Rest : create the array collection from individual elements; 
+    // present in function argument list at last place; 
+// - Spread : spreads the collection (Object/Array) into individual item; with Object/array
+
+// function demo(email, ...args){
+//     console.log(args[1]);           // ?
+// }
+
+// // demo("test@test.com")
+// // demo("test@test.com", 32)
+// demo("test@test.com", 32, true, [], function(){}, {})
+
+
+let numbers = [3,4,5];
+
+// let newNumbers = [1,2, numbers, 6,7,8];          // [1,2,[3,4,5],6,7,8]
+let newNumbers = [1,2, ...numbers, 6,7,8];          // [1,2,3,4,5,6,7,8]
+
+console.log(newNumbers)
+
+let user = {
+    email : "test@test.com",
+    isAdmin : true
+}
+
+let newUser = {
+    ...user,
+    age : 32
+}
+
+console.log(newUser);       // {age : 32, email : "test@test.com"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // - Template Literals
 // - Classes
 // - Module
