@@ -9,4 +9,23 @@ import { User } from 'src/app/model/user.model';
 export class UserInfoComponent {
 
   @Input() user : User;
+
+  dynamicClass = {'my-border' : true, 'my-feature': false}
+  dynamicStyle = {
+    'text-decoration': 'none'
+  }
+
+  onToggle(){
+    this.dynamicClass['my-border'] = !this.dynamicClass['my-border']
+    this.dynamicClass['my-feature'] = !this.dynamicClass['my-feature']
+  }
+
+  onToggleStyle(){
+    this.dynamicStyle['text-decoration'] = 'underline';
+  }
+
+  onRemoveStyle(){
+    this.dynamicStyle['text-decoration'] = 'none';
+  }
+
 }
