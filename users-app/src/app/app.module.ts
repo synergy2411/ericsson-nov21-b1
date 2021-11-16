@@ -7,16 +7,28 @@ import { UsersComponent } from './components/users/user.component';
 import { UserImageComponent } from './components/users/user-image/user-image.component';
 import { UserInfoComponent } from './components/users/user-info/user-info.component';
 import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-demo.component';
+import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
+import { CountryCodePipe } from './pipes/country-code.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
-  declarations: [         // Component, Pipe, Directives
-    AppComponent, UsersComponent, UserImageComponent, UserInfoComponent, LifeCycleDemoComponent
+  declarations: [
+    // Component, Pipe, Directives
+    AppComponent,
+    UsersComponent,
+    UserImageComponent,
+    UserInfoComponent,
+    LifeCycleDemoComponent,
+    PipeDemoComponent,
+    CountryCodePipe,
+    ReversePipe
   ],
-  imports: [              // Module - Built-in & Custom
+  imports: [
+    // Module - Built-in & Custom
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],         // Services
-  bootstrap: [AppComponent]
+  providers: [], // Services
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

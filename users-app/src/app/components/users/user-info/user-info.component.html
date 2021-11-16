@@ -1,14 +1,15 @@
+<!-- {{user | json}} -->
+
+
 <!-- <h3>{{ user.firstName }} {{ user.lastName }}</h3> -->
-
 <ng-content></ng-content>
-
 <!-- <p [ngClass]="{'my-border' : true, 'my-feature': true}">Income : <span [innerText]="user.income"></span></p> -->
 <p
   [ngClass]="dynamicClass"
   (mouseenter)="onToggle()"
   *ngIf="user.isWorking; else elseTemplate"
 >
-  Income : <span [innerText]="user.income"></span>
+  Income : <span [innerText]="user.income | currency : 'INR'"></span>
 </p>
 
 <p
@@ -16,7 +17,7 @@
   (mouseenter)="onToggleStyle()"
   (mouseleave)="onRemoveStyle()"
 >
-  Date of Birth : {{ user.dob }}
+  Date of Birth : {{ user.dob | date : 'dd/MM/yyyy'}}
 </p>
 
 <p>

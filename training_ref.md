@@ -41,6 +41,14 @@ jQuery - Library : to perform specific task
 1. Primitive Types : String, Number, Date, Boolean
 2. Reference Types : Objects, Arrays, Functions
 
+let arr = [1,2,3]
+arr.push(4);            // impure change
+arr = [1,2,3,4];        // pure change - Pure Pipe works
+
+let user = {name : "Foo"}
+user = {name : "Bar}        // Pure Change
+user.name = "Bam"           // Impure Change
+
 # TypeScript Types-
 1. Primitive Types : String, Number, Date, Boolean
 2. Reference Types : Objects, Arrays, Functions
