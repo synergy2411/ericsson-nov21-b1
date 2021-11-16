@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from 'src/app/model/user.model';
+import { Comment, User } from 'src/app/model/user.model';
 
 @Component({
   selector: 'app-user-info',
@@ -29,4 +29,8 @@ export class UserInfoComponent {
     this.dynamicStyle['text-decoration'] = 'none';
   }
 
+  onAddNewComment(comment : Comment){
+    this.user.comments.push(comment);
+    this.tab = 1;
+  }
 }

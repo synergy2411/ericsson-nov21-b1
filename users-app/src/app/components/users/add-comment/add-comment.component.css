@@ -1,0 +1,18 @@
+.ng-invalid.ng-dirty[name="body"]{
+  border : 3px tomato solid
+}
+.ng-valid.ng-dirty[name="body"]{
+  border : 3px green solid
+}
+.ng-invalid.ng-dirty[name="stars"]{
+  border : 3px tomato solid
+}
+.ng-valid.ng-dirty[name="stars"]{
+  border : 3px green solid
+}
+.ng-invalid.ng-dirty[name="author"]{
+  border : 3px tomato solid
+}
+.ng-valid.ng-dirty[name="author"]{
+  border : 3px green solid
+}
