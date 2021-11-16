@@ -17,13 +17,17 @@ export class RegisterComponent implements OnInit {
     Validators.minLength(6),
     RegisterComponent.isExclamation
   ])
+  cnfPassword = new FormControl('',[
+    RegisterComponent.confirmPassword
+  ])
 
   registrationForm : FormGroup;
 
   constructor(private fb : FormBuilder) {
     this.registrationForm = this.fb.group({
-      username : this.username,
-      password : this.password
+      xyz : this.username,
+      password : this.password,
+      cnfPassword : this.cnfPassword
     })
   }
 
@@ -31,7 +35,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister(){
-    console.log(this.registrationForm);
+    // console.log(this.registrationForm.value.xyz);
+    console.log(this.registrationForm)
   }
 
   onReset(){
@@ -41,5 +46,12 @@ export class RegisterComponent implements OnInit {
   static isExclamation(control : AbstractControl){
     const hasExclamation = control.value.indexOf('!') >= 0
     return hasExclamation ? null : {exclamation : true}
+  }
+
+  static confirmPassword(control : AbstractControl){
+    if(control.parent && control.parent.controls && control.parent.controls['password']){
+      const isMatched = control.value == control.parent.controls['password'].value
+      return  isMatched ? null : {notMatched : true}
+    }
   }
 }
