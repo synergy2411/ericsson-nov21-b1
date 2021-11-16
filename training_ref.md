@@ -111,24 +111,7 @@ TypeScript -> Transpile -> JavaScript -> Browser/Node
 
 
 
-
-
-
-
-
-
 https://forms.gle/cp54zyeqmW55UkzQ8
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -138,3 +121,17 @@ https://forms.gle/cp54zyeqmW55UkzQ8
 - 1:00PM - 2:00PM (60 minutes)
 - 3:30PM - 3:45 (15 minutes)
 
+
+
+
+
+
+
+
+# Component Types -
+- Smart | Container | Parent : Contains business logic; contains other component
+    : UsersComponent
+
+- Dump | Presentational | Child : receives the data from parent and creates the UI
+    : UserImage
+    : USerInfo
