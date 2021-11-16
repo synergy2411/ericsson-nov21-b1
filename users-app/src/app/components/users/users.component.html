@@ -1,6 +1,6 @@
 <div class="container">
   <ul class="list-group">
-    <li class="list-group-item">
+    <li class="list-group-item" *ngFor="let user of users">
       <div class="row">
         <div class="col-3">
           <app-user-image (childEvent)="onMoreInfo($event)" [user]="user"></app-user-image>
@@ -11,6 +11,8 @@
           </app-user-info>
         </div>
       </div>
+      <br>
+
     </li>
   </ul>
 </div>

@@ -9,8 +9,9 @@ import { User } from 'src/app/model/user.model';
 export class UserInfoComponent {
 
   @Input() user : User;
+  tab = 1;
 
-  dynamicClass = {'my-border' : true, 'my-feature': false}
+  dynamicClass : {'my-border' : boolean, 'my-feature' : boolean} = {'my-border' : true, 'my-feature': false}
   dynamicStyle = {
     'text-decoration': 'none'
   }

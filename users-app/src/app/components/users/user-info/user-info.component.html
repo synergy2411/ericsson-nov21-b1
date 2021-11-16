@@ -3,12 +3,21 @@
 <ng-content></ng-content>
 
 <!-- <p [ngClass]="{'my-border' : true, 'my-feature': true}">Income : <span [innerText]="user.income"></span></p> -->
-<p [ngClass]="dynamicClass" (mouseenter)="onToggle()">
-  Income : <span [innerText]="user.income"></span></p>
+<p
+  [ngClass]="dynamicClass"
+  (mouseenter)="onToggle()"
+  *ngIf="user.isWorking; else elseTemplate"
+>
+  Income : <span [innerText]="user.income"></span>
+</p>
 
-<p [ngStyle]="dynamicStyle" (mouseenter)="onToggleStyle()" (mouseleave)="onRemoveStyle()">
-  Date of Birth : {{ user.dob }}</p>
-
+<p
+  [ngStyle]="dynamicStyle"
+  (mouseenter)="onToggleStyle()"
+  (mouseleave)="onRemoveStyle()"
+>
+  Date of Birth : {{ user.dob }}
+</p>
 
 <p>
   Total Votes : {{ user.votes }}
@@ -19,3 +28,45 @@
   />
   <input type="number" [(ngModel)]="user.votes" />
 </p>
+
+<ng-template #elseTemplate>
+  <p>Mr. {{ user.lastName }} is NOT working now.</p>
+</ng-template>
+
+
+<br>
+
+<div class="row">
+  <div class="col-10 offset-1">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" (click)="tab=1" >Show Comments</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="tab=2">Add Comment</a>
+      </li>
+    </ul>
+    <br>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div [ngSwitch]="tab">
+      <div *ngSwitchCase="1">
+        <ul class="list-group">
+          <li *ngFor="let comment of user.comments" class="list-group-item">
+            <strong>Stars : {{ comment.stars }}</strong>
+            <br>
+            <blockquote>
+              {{comment.body}}
+              <cite class="float-right">-{{comment.author}}</cite>
+            </blockquote>
+          </li>
+        </ul>
+      </div>
+      <div *ngSwitchCase="2">
+        Comment Form coming soon...
+      </div>
+    </div>
+  </div>
+</div>

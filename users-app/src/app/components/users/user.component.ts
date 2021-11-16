@@ -8,10 +8,11 @@ import { USER_DATA } from '../../model/mock';
   styleUrls : [`./users.component.css`]
 })
 export class UsersComponent implements OnInit{
-  user : User;
+  users : Array<User>;
+
 
   ngOnInit(){
-    this.user = USER_DATA;
+    this.users = USER_DATA;
   }
 
   onMoreInfo(usr : User){
