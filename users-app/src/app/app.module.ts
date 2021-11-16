@@ -10,6 +10,7 @@ import { LifeCycleDemoComponent } from './components/life-cycle-demo/life-cycle-
 import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
+import { AddCommentComponent } from './components/users/add-comment/add-comment.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReversePipe } from './pipes/reverse.pipe';
     LifeCycleDemoComponent,
     PipeDemoComponent,
     CountryCodePipe,
-    ReversePipe
+    ReversePipe,
+    AddCommentComponent
   ],
   imports: [
     // Module - Built-in & Custom

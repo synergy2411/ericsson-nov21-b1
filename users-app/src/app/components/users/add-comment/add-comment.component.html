@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="text-center">Add New Comment</h4>
+      </div>
+      <div class="card-body">
+        <form #commentForm = "ngForm">
+          <!-- stars -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-3">
+                <label for="stars">Stars:</label>
+              </div>
+              <div class="col-9">
+                <select name="stars" class="form-control" ngModel required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- body -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-12">
+                <textarea class="form-control"
+                  rows="8"
+                  name="body"
+                  ngModel
+                  required
+                  minlength="6"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- author -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-12">
+                <input type="email" class="form-control"
+                  name="author"
+                  placeholder="eg. xyz@test.com"
+                  ngModel
+                  required
+                  email>
+              </div>
+            </div>
+          </div>
+          <!-- buttons -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-6">
+                <button class="btn btn-success btn-sm btn-block"
+                  [disabled]="commentForm.invalid"
+                  (click)="onAddComment(commentForm)">Add Comment</button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-warning btn-sm btn-block"
+                  (click)="onReset(commentForm)">Reset</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
