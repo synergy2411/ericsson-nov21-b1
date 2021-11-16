@@ -11,6 +11,17 @@
             <div class="form-group">
               <label for="username">Username : </label>
               <input type="text" name="username" class="form-control" [formControl]="username">
+              <div [hidden]="username.valid || username.untouched">
+                <div class="alert alert-danger">
+                  - Some problem with username field
+                  <div [hidden]="!username.hasError('required')">
+                    * Username is madatory field
+                  </div>
+                  <div [hidden]="!username.hasError('email')">
+                    * Username should be in proper email format
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- Password -->
             <div class="form-group">
@@ -22,6 +33,7 @@
               <div class="row">
                 <div class="col-6">
                   <button class="btn btn-primary btn-block"
+                    [disabled]="registrationForm.invalid"
                     (click)="onRegister()">Register User</button>
                 </div>
                 <div class="col-6">
