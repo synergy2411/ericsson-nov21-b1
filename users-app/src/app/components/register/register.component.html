@@ -27,6 +27,20 @@
             <div class="form-group">
               <label for="password">Password : </label>
               <input type="password" name="password" class="form-control" [formControl]="password">
+              <div [hidden]="password.valid || password.untouched">
+                <div class="alert alert-danger">
+                  - Some problem with password
+                  <div [hidden]="!password.hasError('required')">
+                    * Password is mandatory field
+                  </div>
+                  <div [hidden]="!password.hasError('minlength')">
+                    * Password should be 6 characters long
+                  </div>
+                  <div [hidden]="!password.hasError('exclamation')">
+                    * Password must contain exclamation mark
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- Buttons -->
             <div class="form-group">
@@ -37,7 +51,8 @@
                     (click)="onRegister()">Register User</button>
                 </div>
                 <div class="col-6">
-                  <button class="btn btn-warning btn-block">Reset</button>
+                  <button class="btn btn-warning btn-block"
+                    (click)="onReset()">Reset</button>
                 </div>
               </div>
             </div>

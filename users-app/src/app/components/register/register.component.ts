@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +14,8 @@ export class RegisterComponent implements OnInit {
   ])
   password = new FormControl('', [
     Validators.required,
-    Validators.minLength(6)
+    Validators.minLength(6),
+    RegisterComponent.isExclamation
   ])
 
   registrationForm : FormGroup;
@@ -33,4 +34,12 @@ export class RegisterComponent implements OnInit {
     console.log(this.registrationForm);
   }
 
+  onReset(){
+    this.registrationForm.reset();
+  }
+
+  static isExclamation(control : AbstractControl){
+    const hasExclamation = control.value.indexOf('!') >= 0
+    return hasExclamation ? null : {exclamation : true}
+  }
 }
