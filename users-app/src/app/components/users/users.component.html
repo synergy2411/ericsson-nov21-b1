@@ -1,27 +1,14 @@
 <div class="container">
-<ul class="list-group">
-  <li class="list-group-item">
-    <div class="row">
-      <div class="col-3">
-        <img [src]="user.imgSrc" alt="" class="img-fluid rounded-circle">
-        <button class="btn btn-info btn-sm btn-block"
-          (click)="onMoreInfo(user)">
-          More Info
-        </button>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-3">
+          <app-user-image (childEvent)="onMoreInfo($event)" [user]="user"></app-user-image>
+        </div>
+        <div class="col-9">
+          <app-user-info [user]="user"></app-user-info>
+        </div>
       </div>
-      <div class="col-9">
-        <h3>{{ user.firstName }} {{ user.lastName }}</h3>
-        <p>Income : <span [innerText]="user.income"></span> </p>
-        <p>Date of Birth : {{ user.dob }}</p>
-        <p>Total Votes : {{ user.votes }}
-          <input type="number"
-            [value]="user.votes"
-            (change)="user.votes = $event.target.value">
-          <input type="number" [(ngModel)]="user.votes">
-        </p>
-      </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
 </div>
-

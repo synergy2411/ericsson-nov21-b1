@@ -17,8 +17,8 @@
     : Create Single Page Apps - browser will not re-load/ refresh
     : 2 way data binding (Sync of data)
     : Reusable template / UI
-    : Shadow DOM - Smaller part of DOM
-    : custom elements (<product-detail>, <new-employee>)
+    : Shadow DOM - Smaller part of DOM; Encapsulation
+    : custom elements (<product-detail>, <new-employee>, <app-users>)
     : component based app
     : XHR (XMLHttpRequest) Call
     : Performant Apps - AoT (Ahead of Time) Compilation
@@ -101,7 +101,13 @@ TypeScript -> Transpile -> JavaScript -> Browser/Node
 
 
 
-
+# CLI Commands
+- ng generate component <component-name>
+- ng g c <component-name>
+- ng g d <directive-name>
+- ng g p <pipe-name>
+- ng g s <service-name>
+- ng g m <module-name>
 
 
 

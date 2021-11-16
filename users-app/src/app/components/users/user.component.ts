@@ -18,6 +18,6 @@ export class UsersComponent{
   }
 
   onMoreInfo(usr : any){
-    alert(`Mr. ${usr.lastName} is working with ${usr.company}!`)
+    alert(`Mr. ${usr.lastName} is working with ${usr.company}!!!`)
   }
 }
