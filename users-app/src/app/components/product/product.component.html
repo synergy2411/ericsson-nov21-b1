@@ -4,10 +4,10 @@
   <div class="col-3">
     <ul class="list-group">
       <li class="list-group-item">
-        <a [routerLink]="['overview']">Overview</a>
+        <a [routerLink]="['overview', 99]">Overview</a>
       </li>
       <li class="list-group-item">
-        <a [routerLink]="['specification']">Specification</a>
+        <a [routerLink]="['specification']" [queryParams]="{'name' : 'iPhoneXS', 'price' : 124}">Specification</a>
       </li>
     </ul>
   </div>
