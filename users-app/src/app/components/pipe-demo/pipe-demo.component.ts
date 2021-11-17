@@ -20,6 +20,9 @@ export class PipeDemoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // for(let i = 0; i< 5; i++){
+    //   debugger;
+    // }
   }
 
 }

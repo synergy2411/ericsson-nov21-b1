@@ -168,7 +168,7 @@ https://forms.gle/cp54zyeqmW55UkzQ8
 - Remote Server Call
 - Single Page Apps
 - Multi-Module
-- App Deploy
+- App Deploy : Firebase 
 
 
 # HttpClientModule
@@ -208,3 +208,15 @@ CREATIONAL OPERATORS
 ERROR HANDLING OPERATORS
 - catchError
 - throwError
+
+# App Deployment Steps
+- ng build [--prod]
+- npm install firebase-tools -g
+- firebase login
+- firebase init
+- firebase deploy
+
+# http-server
+- npm install http-server
+- cd dist/users-app
+- http-server
