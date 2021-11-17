@@ -6,6 +6,7 @@ import { ProductComponent } from "./components/product/product.component";
 import { SpecificationComponent } from "./components/product/specification/specification.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { UsersComponent } from "./components/users/user.component";
+import { UsesGaurdService } from "./services/uses-gaurd.service";
 
 export const APP_ROUTES : Routes = [
   {
@@ -13,7 +14,8 @@ export const APP_ROUTES : Routes = [
     component : RegisterComponent
   },{
     path : 'users',           // http://localhost:4200/users
-    component : UsersComponent
+    component : UsersComponent,
+    canActivate : [UsesGaurdService]
   },{
     path : 'pipe-demo',       // http://localhost:4200/pipe-demo
     component : PipeDemoComponent
