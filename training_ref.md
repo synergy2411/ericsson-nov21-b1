@@ -178,3 +178,32 @@ https://forms.gle/cp54zyeqmW55UkzQ8
 - Convert USER_DATA into json file
 - Remote Server Call on JSON
 - Populate JSON data in component
+
+
+# RxJS Commonly used Operators 
+- tap
+FILTEREING OPERATOR
+- take
+- startWith
+- endWith
+- filter
+- reduce
+- debounceTime
+- ajax
+COMBINING OPERATORS
+- combineLatest
+- forkJoin
+TRANSFORMING OPERATORS
+- map
+- merge
+- concat
+- switch
+CREATIONAL OPERATORS
+- from
+- of 
+- interval
+- fromEvent
+- Subjects
+ERROR HANDLING OPERATORS
+- catchError
+- throwError

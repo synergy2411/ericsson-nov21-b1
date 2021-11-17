@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/user.component';
@@ -15,6 +16,8 @@ import { AddCommentComponent } from './components/users/add-comment/add-comment.
 import { RegisterComponent } from './components/register/register.component';
 import { DataService } from './services/data.service';
 import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
+import { APP_ROUTES } from './app.routes';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,16 @@ import { ObservableDemoComponent } from './components/observable-demo/observable
     ReversePipe,
     AddCommentComponent,
     RegisterComponent,
-    ObservableDemoComponent
+    ObservableDemoComponent,
+    HeaderComponent
   ],
   imports: [
     // Module - Built-in & Custom
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES)
   ],
   // providers: [DataService], // Services
   providers: [], // Services
