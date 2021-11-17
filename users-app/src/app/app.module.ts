@@ -14,6 +14,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
 import { AddCommentComponent } from './components/users/add-comment/add-comment.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DataService } from './services/data.service';
+import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DataService } from './services/data.service';
     CountryCodePipe,
     ReversePipe,
     AddCommentComponent,
-    RegisterComponent
+    RegisterComponent,
+    ObservableDemoComponent
   ],
   imports: [
     // Module - Built-in & Custom
@@ -36,7 +38,8 @@ import { DataService } from './services/data.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [DataService], // Services
+  // providers: [DataService], // Services
+  providers: [], // Services
   bootstrap: [AppComponent],
 })
 export class AppModule {}
