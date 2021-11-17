@@ -143,3 +143,38 @@ https://forms.gle/cp54zyeqmW55UkzQ8
 - Dump | Presentational | Child : receives the data from parent and creates the UI
     : UserImage
     : USerInfo
+
+
+# Component Communication
+- Parent to Child -> Property Binding + @Input()
+- Child to Parent -> Event Binding + @Output()
+
+# Component Life Cycle
+
+# Directives
+- Attribute : ngClass, ngStyles : changes the appearance without affecting the template
+- Structural : *ngIf, *ngFor, *ngSwitch : change the structure of DOM
+
+# Pipes : format the data on UI
+
+# Forms -
+- Template Driven : HTML5 validation on template
+- Reactive/Model Driven : Angular validations on Model
+
+
+
+- Service
+- Observables
+- Remote Server Call
+- Single Page Apps
+- App Deploy
+
+
+# HttpClientModule
+- unlock the module -> Import in Root Module
+- HttpClient Service -> can be injected 
+- HttpClient instance can make the Remote Server Call
+
+- Convert USER_DATA into json file
+- Remote Server Call on JSON
+- Populate JSON data in component

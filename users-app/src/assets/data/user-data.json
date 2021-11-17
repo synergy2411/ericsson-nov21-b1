@@ -1,0 +1,38 @@
+[
+  {
+    "firstName": "bill",
+    "lastName": "gates",
+    "income": 50000,
+    "dob": "1964-12-20T18:30:00.000Z",
+    "isWorking": true,
+    "company": "microsoft",
+    "imgSrc": "./assets/images/bill.jpg",
+    "votes": 120,
+    "comments": [
+      { "stars": 4, "body": "Awesome work", "author": "foo@test.com" },
+      { "stars": 5, "body": ".....", "author": "bar@test.com" }
+    ]
+  },
+  {
+    "firstName": "steve",
+    "lastName": "jobs",
+    "income": 0,
+    "dob": "1963-12-31T18:30:00.000Z",
+    "isWorking": false,
+    "company": "Apple",
+    "imgSrc": "https://d.newsweek.com/en/full/663518/steve-jobs.jpg",
+    "votes": 180,
+    "comments": [{ "stars": 4, "body": "Great work", "author": "xyz@test.com" }]
+  },
+  {
+    "firstName": "tim b.",
+    "lastName": "lee",
+    "income": 30000,
+    "dob": "1964-07-31T18:30:00.000Z",
+    "isWorking": true,
+    "company": "World Wide Web",
+    "imgSrc": "https://ichef.bbci.co.uk/images/ic/1280xn/p025m2fq.jpg",
+    "votes": 110,
+    "comments": []
+  }
+]

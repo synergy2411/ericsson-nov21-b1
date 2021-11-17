@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/user.component';
@@ -12,6 +13,7 @@ import { CountryCodePipe } from './pipes/country-code.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { AddCommentComponent } from './components/users/add-comment/add-comment.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -31,9 +33,10 @@ import { RegisterComponent } from './components/register/register.component';
     // Module - Built-in & Custom
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [], // Services
+  providers: [DataService], // Services
   bootstrap: [AppComponent],
 })
 export class AppModule {}
