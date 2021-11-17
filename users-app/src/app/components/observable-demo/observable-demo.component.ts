@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
+import { tap, map, take, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-observable-demo',
@@ -25,7 +26,12 @@ export class ObservableDemoComponent implements OnInit {
   }
 
   onSubscribe(){
-    this.unSub$ = this.obs$.subscribe({
+    this.unSub$ = this.obs$.pipe(
+      tap(value => console.log("TAP - ", value)),
+      map(value => "My " + value),
+      take(2),
+      startWith("Ready for Packages...")
+    ).subscribe({
       next : pkg => console.log("next - ",pkg),
       error : err => console.error(err),
       complete : () => console.log("COMPLETED")
