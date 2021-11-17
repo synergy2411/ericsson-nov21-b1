@@ -30,6 +30,9 @@ export const APP_ROUTES : Routes = [
       {path : "specification", component : SpecificationComponent}
     ]
   },{
+    path : "employee",
+    loadChildren : () => import("./modules/employee/employee.module").then(m => m.EmployeeModule)
+  },{
     path : '**',                // http://localhost:4200/not-exist
     redirectTo : 'register',
     pathMatch : 'full'
