@@ -45,8 +45,20 @@
 
             <!-- Confirm Password -->
             <div class="form-group">
-              <label for="cnfPassword">Re-enter PAssword : </label>
-              <input type="text" [formControl]="cnfPassword" name="cnfPassword" class="form-control">
+              <label for="cnfPassword">Re-enter Password : </label>
+              <input type="password" [formControl]="cnfPassword" name="cnfPassword" class="form-control">
+              <div [hidden]="cnfPassword.valid || cnfPassword.untouched">
+                <div class="alert alert-danger">
+                  * Some Problem with Confirm Password
+                  <div [hidden]="!cnfPassword.hasError('required')">
+                    - Confirm Password is mandatory field
+                  </div>
+                  <div [hidden]="!cnfPassword.hasError('notMatched')">
+                    - Confirm Password does not match with Password
+                  </div>
+
+                </div>
+              </div>
             </div>
 
             <!-- Buttons -->

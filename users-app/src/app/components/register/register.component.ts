@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
     RegisterComponent.isExclamation
   ])
   cnfPassword = new FormControl('',[
+    Validators.required,
     RegisterComponent.confirmPassword
   ])
 
