@@ -256,7 +256,7 @@ html
 
 
 # React App Creation
-- npx create-react-app expenses
+- npx create-react-app expenses [--template=typescript]
 
 # React Internals -
 JSX -> JavaScript -> Virtual DOM -> Real DOM -> Model Changes -> React re-renders the UI effeciently
