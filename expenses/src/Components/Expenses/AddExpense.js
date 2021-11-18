@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { v4 } from 'uuid';
 
 const AddExpense = (props) => {
-    
+    // const InputUsernameRef = useRef();
+
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('')
@@ -23,6 +24,7 @@ const AddExpense = (props) => {
             id : v4()
         }
         props.onAdd(newExpense)
+        // console.log("REFS : ", InputUsernameRef.current.value)
     }
 
     const resetHandler = (event) => {
@@ -39,6 +41,8 @@ const AddExpense = (props) => {
           <div className="card-body">
               <h5 className="text-center">Add New Expense</h5>
             <form>
+                {/* Using Refs */}
+                {/* <input className="form-control" name="username" ref={InputUsernameRef}/> */}
                 {/* Title */}
               <div className="form-group">
                 <label htmlFor="title">Title :</label>

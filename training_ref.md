@@ -271,3 +271,8 @@ JSX -> JavaScript -> Virtual DOM -> Real DOM -> Model Changes -> React re-render
 <div data-id="99"></div>
 
 <div className="99"></div>
+
+- useEffect(()=>{}) : trigger everytime whenever state changes
+- useEffect(()=>{}, []) : triggers only once first time rendering
+- useEffect(()=>{}, [Dependencies]) : triggers after mentioned dependency change
+- useEffect(()=>{ return () => {}}, [Dependencies]) : Clean up function fires before the useEffect callback function
