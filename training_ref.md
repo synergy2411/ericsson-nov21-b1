@@ -163,11 +163,11 @@ https://forms.gle/cp54zyeqmW55UkzQ8
 
 
 
-- Service
-- Observables
+- Service : implments DIl business logic in service; Singleton
+- Observables : Streams on which event emit at certain time interval; pipeable operators eg. tap, map, take etc
 - Remote Server Call
-- Single Page Apps
-- Multi-Module
+- Single Page Apps : Angular Router; Nested routing, Route & Query Parameters; Link guards
+- Multi-Module : Lazy Loading
 - App Deploy : Firebase 
 
 
@@ -181,7 +181,7 @@ https://forms.gle/cp54zyeqmW55UkzQ8
 - Populate JSON data in component
 
 
-# RxJS Commonly used Operators 
+# RxJS Commonly used Operators - rxjs.dev
 - tap
 FILTEREING OPERATOR
 - take
@@ -217,6 +217,53 @@ ERROR HANDLING OPERATORS
 - firebase deploy
 
 # http-server
-- npm install http-server
+- npm install http-server -g
 - cd dist/users-app
 - http-server
+
+
+
+__________________________________
+
+# What is React ?
+- Client-side JavaScript Library
+- Efficient UI rendering
+- SPA : react-router
+- State Management : flux / Redux
+- Form Validation : formik, useForm etc
+- Remote Server Call : axios, jQuery etc
+- Component based architecture (Functional / Class Based)
+- Virtual DOM : in-memory JavaScript representation of Real DOM
+- Props : way to supply the data from parent comp to child comp
+- State : data to persist
+- 'V' in MVC
+
+
+DOM : hierarchical structure of HTML Elements
+html
+    head
+        title
+        meta
+        script
+        link
+    body
+        div
+        header
+        p
+        footer 
+        ul 
+        img
+
+
+# React App Creation
+- npx create-react-app expenses
+
+# React Internals -
+JSX -> JavaScript -> Virtual DOM -> Real DOM -> Model Changes -> React re-renders the UI effeciently
+
+# Atomic Design (Thinking in React way)
+- Atom : Smallest unit - button, inputbox, p
+- Molecules : combo of Atoms - button + Inputfield - searchbar - 
+- Organism : combo of molecule - navbar - (navlink + searchbar)
+- Template : combo of organism
+- Pages : combo of various templates
