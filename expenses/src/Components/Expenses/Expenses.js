@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import AddExpense from "./AddExpense";
 import ExpenseItem from "./ExpenseItem";
 
 let DUMMY_EXPENSES = [
@@ -38,9 +39,13 @@ const Expenses = () => {
   };
 
   return (
+    <Fragment>
+    <AddExpense />
+    <br />
     <div className="row">
       {expenses.map((expense) => (
         <ExpenseItem
+          key={expense.id}
           id={expense.id}
           title={expense.title}
           amount={expense.amount}
@@ -49,6 +54,7 @@ const Expenses = () => {
         />
       ))}
     </div>
+    </Fragment>
   );
 };
 

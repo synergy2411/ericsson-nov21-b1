@@ -6,7 +6,8 @@ class ClassBasedComp extends React.Component {
         super(props)
         console.log("constructor");
         this.state = {
-            counter : 0
+            counter : 0,
+            result : []
         }
     }
 

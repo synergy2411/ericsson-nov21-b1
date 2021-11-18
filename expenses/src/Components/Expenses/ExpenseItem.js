@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import ExpenseDate from "./ExpenseDate";
 
 const ExpenseItem = (props) => {
@@ -19,6 +21,14 @@ const ExpenseItem = (props) => {
         </div>
     </div>
     )
+}
+
+ExpenseItem.propTypes = {
+    id : PropTypes.string.isRequired,
+    title : PropTypes.string.isRequired,
+    amount : PropTypes.number.isRequired,
+    createdAt : PropTypes.object.isRequired,
+    onDelete : PropTypes.func.isRequired
 }
 
 export default ExpenseItem;

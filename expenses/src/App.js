@@ -8,7 +8,7 @@ function App() {
 
   // const onToggleShowComp = () => {
   //   setShowComp(!showComp)
-  //   setTitle("Hello JavaScript")
+  //   setTitle(prevState => {return "Hello World"})
   // }
 
   return(
