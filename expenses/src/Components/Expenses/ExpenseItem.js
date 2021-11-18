@@ -1,6 +1,9 @@
 import ExpenseDate from "./ExpenseDate";
 
 const ExpenseItem = (props) => {
+    const onBtnDelete = () => {
+        props.onDelete(props.id)
+    }
     return (
         <div className="col-6">
         <div className="card">
@@ -9,8 +12,9 @@ const ExpenseItem = (props) => {
             </div>
             <div className="card-body">
                 <p>Amount : ${props.amount}</p>
-                {/* <p>Created At : {props.createdAt.toString()}</p> */}
                <ExpenseDate date={props.createdAt} />
+               <br/>
+               <button className="btn btn-block btn-danger" onClick={onBtnDelete}>Delete</button>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from "react";
+import React from "react";
 import Expenses from "./Components/Expenses/Expenses";
 
 function App() {
