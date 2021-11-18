@@ -33,6 +33,7 @@ let DUMMY_EXPENSES = [
 const Expenses = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
   const [showForm, setShowForm] = useState(false);
+  const [selectedYear, setSelectedYear] = useState(2021)
 
   const deleteExpense = (id) => {
     setExpenses((prevExpenses) => {
@@ -46,22 +47,31 @@ const Expenses = () => {
     })
   }
 
+  const onToggleForm = () => setShowForm(!showForm)
+
+  const onSelectedYear = selYear => {
+    setSelectedYear(selYear)
+  }
+  
+  let filteredExpenses = expenses.filter(exp => exp.createdAt.getFullYear().toString() === selectedYear.toString())
+
   return (
     <Fragment>
       <div className="row">
         <div className="col-3 offset-3">
-          <button className="btn btn-block btn-primary" onClick={()=>setShowForm(!showForm)}>
+          <button className="btn btn-block btn-primary" 
+            onClick={onToggleForm}>
             {showForm ? 'Hide Form' :'Add New Expense'}
           </button>
         </div>
         <div className="col-3">
-          <ExpenseFilter />
+          <ExpenseFilter onSelected={onSelectedYear} selectedYear={selectedYear} />
         </div>
       </div>
     {showForm && <AddExpense onAdd={onAddNewExpense} />}
     <br />
     <div className="row">
-      {expenses.map((expense) => (
+      {filteredExpenses.map((expense) => (
         <ExpenseItem
           key={expense.id}
           id={expense.id}
