@@ -19,7 +19,6 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <p className="display-4 text-center">My Expenses App</p>
       <Switch>
         <Route path="/" exact>
           <Redirect to="/expenses" />
@@ -30,9 +29,7 @@ function App() {
         <Route path="/expenses">
           <Expenses />
         </Route>
-        <Route path="/courses/:courseName">
-          <CourseDetail />
-        </Route>
+        
         <Route path="/courses">
           <Courses />
         </Route>

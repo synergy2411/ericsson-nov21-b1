@@ -57,6 +57,7 @@ const Expenses = () => {
 
   return (
     <Fragment>
+      <p className="text-center display-4">My Expenses App</p>
       <div className="row">
         <div className="col-3 offset-3">
           <button className="btn btn-block btn-primary" 
