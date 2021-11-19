@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import * as fromActions from '../../store/actions/root-actions';
+import './Counter.css';
 
 const Counter = (props) => {
   return (
@@ -24,7 +25,8 @@ const Counter = (props) => {
             <div className="col-4 offset-4">
               <ul className="list-group">
                   {props.result.map((res, i) => (
-                      <li className="list-group-item" key={i}>{res}</li>
+                      <li onClick={() => props.onDeleteResult(i)} 
+                        className="list-group-item my-item" key={i}>{res}</li>
                   ))}
               </ul>
             </div>
@@ -47,7 +49,8 @@ const mapDispatchToProps = (dispatchToStore) => {
     onDecrement: () => dispatchToStore({ type : fromActions.DECREMENT }),
     onAddCounter: (value) => dispatchToStore(fromActions.onAddCounter(value)),
     onSubtract : value => dispatchToStore(fromActions.onSubtractCounter(value)),
-    onStoreResult : () => dispatchToStore(fromActions.onStoreResult())
+    onStoreResult : () => dispatchToStore(fromActions.onStoreResult()),
+    onDeleteResult : index => dispatchToStore(fromActions.onDeleteResult(index))
   };
 };
 

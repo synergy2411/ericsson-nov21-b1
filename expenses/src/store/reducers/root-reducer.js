@@ -37,6 +37,13 @@ function rootReducer(state = initialState, action){
                 result : [state.counter, ...state.result]
             }
         }
+        case fromActions.DELETE_RESULT :{
+            const filteredResult = state.result.filter((val, idx) => idx !== action.index)
+            return {
+                ...state,
+                result : filteredResult
+            }
+        }
         default:
             return state;
     }

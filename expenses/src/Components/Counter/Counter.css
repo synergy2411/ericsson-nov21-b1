@@ -1,0 +1,7 @@
+.my-item{
+    transition: all 0.5s ease-in;
+}
+.my-item:hover{
+    cursor: pointer;
+    background-color: beige;
+}
