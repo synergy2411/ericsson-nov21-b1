@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
-import CourseDetail from "./Components/Courses/CourseDetail";
+import Counter from "./Components/Counter/Counter";
 import Courses from "./Components/Courses/Courses";
 import Expenses from "./Components/Expenses/Expenses";
 import Header from "./Components/Header/Header";
@@ -29,7 +29,9 @@ function App() {
         <Route path="/expenses">
           <Expenses />
         </Route>
-        
+        <Route path="/counter">
+          <Counter />
+        </Route>
         <Route path="/courses">
           <Courses />
         </Route>

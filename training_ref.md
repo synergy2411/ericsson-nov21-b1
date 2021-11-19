@@ -295,3 +295,6 @@ JSX -> JavaScript -> Virtual DOM -> Real DOM -> Model Changes -> React re-render
 > npm install react-router-dom@5
 
 # to generate package.json -> npm init -y
+
+# React Redux Packages
+- npm install redux react-redux

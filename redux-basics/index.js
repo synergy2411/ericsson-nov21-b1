@@ -8,7 +8,7 @@ const initialState ={
 }
 
 function rootReducer(state = initialState, action){
-    if(action.type === "INCREMENT"){
+    if(action.type === "[COUNTER] - to increase the counter by one"){
         return {
             counter : state.counter + 1
         }
@@ -39,7 +39,7 @@ store.subscribe(() => {
 })
 
 // Dispatch Action
-store.dispatch({type : "INCREMENT"})
+store.dispatch({type : "[COUNTER] - to increase the counter by one"})
 
 store.dispatch({type : "DECREMENT"})
 
