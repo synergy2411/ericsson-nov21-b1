@@ -11,7 +11,25 @@ const Counter = (props) => {
             Increase
           </button>
           <button className="btn btn-warning" onClick={props.onDecrement}>Decrease</button>
+          <button className="btn btn-info" onClick={() => props.onAddCounter(10)}>Add Counter</button>
+          <button className="btn btn-danger" onClick={() => props.onSubtract(8)}>Subtract Counter</button>
         </div>
+        <hr />
+        <div className="row">
+            <div className="col-4 offset-4">
+                <button className="btn btn-success btn-block" onClick={props.onStoreResult}>Store Result</button>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-4 offset-4">
+              <ul className="list-group">
+                  {props.result.map((res, i) => (
+                      <li className="list-group-item" key={i}>{res}</li>
+                  ))}
+              </ul>
+            </div>
+        </div>
+        
       </div>
     </div>
   );
@@ -20,12 +38,16 @@ const Counter = (props) => {
 const mapStateToProps = (state) => {
   return {
     counter: state.counter,
+    result : state.result
   };
 };
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatchToStore) => {
   return {
-    onIncrement: () => dispatch({ type: fromActions.INCREMENT }),
-    onDecrement: () => dispatch({ type : fromActions.DECREMENT })
+    onIncrement: () => dispatchToStore({ type: fromActions.INCREMENT }),
+    onDecrement: () => dispatchToStore({ type : fromActions.DECREMENT }),
+    onAddCounter: (value) => dispatchToStore(fromActions.onAddCounter(value)),
+    onSubtract : value => dispatchToStore(fromActions.onSubtractCounter(value)),
+    onStoreResult : () => dispatchToStore(fromActions.onStoreResult())
   };
 };
 
