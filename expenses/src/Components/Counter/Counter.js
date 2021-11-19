@@ -18,7 +18,8 @@ const Counter = (props) => {
         <hr />
         <div className="row">
             <div className="col-4 offset-4">
-                <button className="btn btn-success btn-block" onClick={props.onStoreResult}>Store Result</button>
+                <button className="btn btn-success btn-block" 
+                    onClick={() => props.onStoreResult(props.counter)}>Store Result</button>
             </div>
         </div>
         <div className="row">
@@ -39,8 +40,8 @@ const Counter = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    counter: state.counter,
-    result : state.result
+    counter: state.ctr.counter,
+    result : state.res.result
   };
 };
 const mapDispatchToProps = (dispatchToStore) => {
@@ -49,7 +50,7 @@ const mapDispatchToProps = (dispatchToStore) => {
     onDecrement: () => dispatchToStore({ type : fromActions.DECREMENT }),
     onAddCounter: (value) => dispatchToStore(fromActions.onAddCounter(value)),
     onSubtract : value => dispatchToStore(fromActions.onSubtractCounter(value)),
-    onStoreResult : () => dispatchToStore(fromActions.onStoreResult()),
+    onStoreResult : (counter) => dispatchToStore(fromActions.onStoreResult(counter)),
     onDeleteResult : index => dispatchToStore(fromActions.onDeleteResult(index))
   };
 };

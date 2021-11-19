@@ -14,9 +14,10 @@ export const onDeleteResult = index => {
     }
 }
 
-export const onStoreResult = () => {
+export const onStoreResult = (counter) => {
     return {
-        type : STORE_RESULT
+        type : STORE_RESULT,
+        counter
     }
 }
 
