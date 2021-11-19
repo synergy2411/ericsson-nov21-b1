@@ -293,3 +293,5 @@ JSX -> JavaScript -> Virtual DOM -> Real DOM -> Model Changes -> React re-render
 
 > npm uninstall react-router-dom
 > npm install react-router-dom@5
+
+# to generate package.json -> npm init -y
